@@ -15,13 +15,13 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message
-
+        
 if __name__ == "__main__":
     try:
-        a = 1 / 0
-    except ZeroDivisionError as e:
+        a=1/0
+    except Exception as e:
         logger.setup_logging()
-        logger.logging.error("Divide by zero error")
+        logger.logging.error(str(e))
         raise CustomException(e, sys)
 
 
