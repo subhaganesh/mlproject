@@ -47,6 +47,6 @@ class dataingestion:
             
 if __name__=="__main__":
     obj=dataingestion()
-    obj.initiate_data_ingestion()
+    obj.initiate_data_ingestion()   #initiate data ingestion to make artifacts folder
 
         
