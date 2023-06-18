@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
-@dataclass
+@dataclass                            #---dataclass is used for defining variables only if you definie functions use init method
 class dataingestionconfig:
     train_data_path: str=os.path.join('artifacts',"train.csv")
     test_data_path: str=os.path.join('artifacts',"test.csv")
@@ -37,7 +37,7 @@ class dataingestion:
             
             logging.info("ingestion of the data is completed")
 
-            return(
+            return(                                                 #----return this for the data transformation purpose
                 self.ingestion_config.train_data_path,
                 self.ingestion_config.test_data_path
 
@@ -48,5 +48,3 @@ class dataingestion:
 if __name__=="__main__":
     obj=dataingestion()
     obj.initiate_data_ingestion()   #initiate data ingestion to make artifacts folder
-
-        
