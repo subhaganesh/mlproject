@@ -2,9 +2,13 @@ import os
 import sys
 from src.exception import CustomException
 from src.logger import logging
+
 import pandas as pd 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+
+from src.components.data_transformation import datatransformation
+from src.components.data_transformation import datatransformationconfig
 
 @dataclass                            #---dataclass is used for defining variables only if you definie functions use init method
 class dataingestionconfig:
@@ -47,4 +51,9 @@ class dataingestion:
             
 if __name__=="__main__":
     obj=dataingestion()
-    obj.initiate_data_ingestion()   #initiate data ingestion to make artifacts folder
+    train_data,test_data=obj.initiate_data_ingestion()   #initiate data ingestion 
+
+    data_transformation=datatransformation()
+    data_transformation.initiate_data_transformation(train_data,test_data)   #initiate data transformation
+    
+
