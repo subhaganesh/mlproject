@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
+
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder,StandardScaler
@@ -62,6 +63,8 @@ class datatransformation:
 
         except Exception as e:
             raise CustomException(e,sys)
+        
+        
         
     def initiate_data_transformation(self,train_path,test_path):
 
