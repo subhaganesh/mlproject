@@ -29,9 +29,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: subhaganesh/stud_perfo_app:latest
-
-      - name: Save image tag to environment file
-        run: echo "IMAGE_TAG=subhaganesh/stud_perfo_app:latest" >> $GITHUB_ENV
-
       - name: Run the Docker container
-        run: docker run ${{ env.IMAGE_TAG }}
+        run: docker run  subhaganesh/stud_perfo_app:latest
