@@ -29,3 +29,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: subhaganesh/stud_perfo_app:latest
+      - name: Run the Docker container
+        run: docker run subhaganesh/stud_perfo_app:latest
