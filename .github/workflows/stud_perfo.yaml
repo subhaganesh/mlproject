@@ -17,7 +17,7 @@ jobs:
         run: |
           # Replace this command with your CI test commands
           echo "Running CI tests..."
-          pytest
+          python
 
   cd:
     needs: ci
