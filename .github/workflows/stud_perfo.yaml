@@ -51,4 +51,4 @@ jobs:
         run: |
           # Replace the following commands with your deployment steps
             echo "Deploying the Docker image to production..."
-            ssh subhaganesh@192.168.43.1 "docker pull subhaganesh/stud_perfo_app:latest && docker stop vigilant_carver && docker rm vigilant_carver && docker run -d --name vigilant_carver -p 5000:5000 subhaganesh/stud_perfo_app:latest"
+            ssh subhaganesh@192.168.43.1 "docker pull subhaganesh/stud_perfo_app:latest && docker stop vigilant_carver && docker rm aa2f99e6f215 && docker run -d --name aa2f99e6f215 -p 0.0.0.0:5000 subhaganesh/stud_perfo_app:latest"
