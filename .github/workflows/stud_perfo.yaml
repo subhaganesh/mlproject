@@ -29,5 +29,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: subhaganesh/stud_perfo_app:latest
-      - name: Run the Docker container
-        run: docker run  subhaganesh/stud_perfo_app:latest
+      - name: Save state
+        run: echo "::set-state name=name::subhaganesh"
+
+      - name: Set output
+        run: echo "::set-output name=output::mathscore"
