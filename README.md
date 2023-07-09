@@ -38,6 +38,12 @@ dill: 0.3.4
 
 flask: 2.0.1
 
+## Deployment
+The deployment was done in the docker hub by using github actions and dockerfile a workflow is created so that if any change in the code happens the it automatically build and push that change to the docker image.
+
+## docker push subhaganesh/stud_perfo_app:tagname 
+By use the above command you can download the app as a docker image 
+
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://subhaganesh.github.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/subhaganesh-s-170875236/)
